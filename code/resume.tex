@@ -1,0 +1,279 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Vedic Nerd - Resume LaTeX Template
+%
+% Original author:
+% Ganesh Mohan (http://about.me/ganesh.mohan)
+%
+% Github repository:
+% https://github.com/ganesh2shiv/resume-latex-template
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass{article}
+
+\usepackage{fullpage}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[T1]{fontenc}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+
+% DEFINITIONS FOR RESUME
+
+\textheight=10in
+\pagestyle{fancy}
+\raggedright
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+
+\setlength{\hoffset}{-2pt}
+\setlength{\footskip}{20pt}
+
+\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+
+\newcommand{\contact}[3]{
+\vspace*{5pt}
+\begin{center}
+{\LARGE \scshape {#1}}\\
+\vspace{3pt}
+#2 
+\vspace{2pt}
+#3
+\end{center}
+\vspace*{-8pt}
+}
+
+\newcommand{\header}[1]{{
+\hspace*{-15pt}\vspace*{6pt} \textsc{#1}} \vspace*{-6pt} 
+\lineunder
+}
+
+\newcommand{\lineunder}{
+\vspace*{-8pt} \\ \hspace*{-18pt} 
+\hrulefill \\
+}
+
+\newcommand{\content}{
+\vspace*{2pt}%
+}
+
+\newcommand{\college}[5]{\vspace*{2pt}% 
+\textbf{#1} \labelitemi #2 \labelitemi #3 \hfill #4 \\ #5 
+\vspace*{5pt}
+}
+
+\newcommand{\school}[4]{
+\textbf{#1} \labelitemi #2 \hfill #3 \\ #4 \vspace*{5pt}
+}
+
+\newcommand{\employer}[4]{{
+\vspace*{2pt}%
+\textbf{#1} #2 \hfill #3\\ #4 \vspace*{2pt}}
+}
+
+\newcommand{\project}[4]{{
+\vspace*{2pt}% 
+\textbf{#1} #2 \hfill #3\\ \textit{#4} \vspace*{2pt}}
+}
+
+\renewcommand{\labelitemi}{
+$\vcenter{\hbox{\tiny$\bullet$}}$\hspace*{3pt}
+}
+
+\renewcommand{\labelitemii}{
+$\vcenter{\hbox{\tiny$\bullet$}}$\hspace*{-3pt}
+}
+
+\newenvironment{bullet-list-major}{
+\begin{list}{\labelitemii}{\setlength\leftmargin{3pt} 
+\topsep 0pt \itemsep -2pt}}{\vspace*{4pt}\end{list}
+}
+
+\newenvironment{bullet-list-minor}{
+\begin{list}{\labelitemii}{\setlength\leftmargin{15pt} 
+\topsep 0pt \itemsep -2pt}}{\vspace*{4pt}\end{list}
+}
+
+\cfoot{
+Last updated: December 16, 2015
+}
+
+\rfoot{
+Page $\thepage\hspace*{3pt}\vert\hspace*{3pt}\pageref{LastPage}$
+}
+
+% END RESUME DEFINITIONS
+
+\begin{document}
+
+\small
+\smallskip
+\vspace*{-44pt}
+
+\contact{Ganesh Mohan}
+{Sector 14, Gurgaon, Haryana, India 122001\\}
+{(+91) 987654321 \labelitemi ganesh2shiv@gmail.com \labelitemi www.about.me/ganesh.mohan}
+\vspace{15pt}
+\header{Personal Profile}
+    \content{A Computer Science graduate, smart working, reliable, self-motivated with good communication and technical skills. Always willing to learn \& experiment, good eye for detail, happy to work both independently and as part of a team.\vspace{5pt}}
+
+\vspace*{4pt}%
+\header{Objective}
+    \content{Seeking a position where I can utilize my skills in producing results and want to join an organization that can help me grow as an individual.\vspace{5pt}}
+
+\vspace*{4pt}%
+\header{Education}
+    \college{Guru Nanak Dev University}{Main Campus}{Amritsar, India}{Jul 2010 -- May 2014}
+    {\textit{Bachelor of Technology \labelitemi Computer Science \& Engg.}\labelitemi CGPA: 6.1/10}
+
+    \school{Bansal Classes}{Kota, India}{July 2009 -- March 2010}
+    {\textit{JEE Coaching} \labelitemi Sterling batch}
+
+    \school{Gobindgarh Public School}{Mandi Gobindgarh, India}{July 2007 -- April 2009}
+    {\textit{Senior Secondary} \labelitemi CBSE Board \labelitemi Marks: 72\%}
+
+    \school{S. D. Public School}{Mandi Gobindgarh, India}{May 2007}
+    {\textit{High School} \labelitemi Punjab Board \labelitemi Marks: 67\%}
+
+\vspace*{4pt}%
+\header{Work Experience}
+    \employer{Sr. Android Application Developer}{}{Nov 2014 -- present}{Algofocus Technologies, 91springboard, Gurgaon, India.}
+	\begin{bullet-list-minor}
+	\item Founding team member and Android application development team lead
+	\item Developed, designed, and manually tested various apps during development
+	\item Researched about new emerging technologies in mobile application development
+	\item Helped two interns get started with Android application development
+    \end{bullet-list-minor}
+
+    \employer{Software Developer}{-- Android}{July -- Nov 2014}{Altruist Technologies, DLF, IT Park, Chandigarh, India.}
+	\begin{bullet-list-minor}
+	\item Worked on few projects and was part of Android application development team
+	\item Developed and manually tested various apps during development life cycle
+	\item Collaborated with team using development tools like SVN and MantisBT
+	\item Did code reviews and fixed few major bugs in some projects
+	\end{bullet-list-minor}
+
+\vspace*{4pt}%
+\header{Projects}
+    \project{Reliance Conference}{-- playstore link: goo.gl/HHzRin}{Feb 2015}{Algofocus Technologies}
+	\begin{bullet-list-minor}
+	\item Developed a native Android app for Reliance Capital Asset Management
+	\item Employees can view details of meetings and conference schedules
+	\item Accept meeting invites and add events in calender directly from notifications
+	\item In-app secure pdf reader for reading confidential documents
+    \item Users can chat with each other and maintain chat history
+	\item Encrypted data transfer through APIs using AES
+    \end{bullet-list-minor}
+
+    \project{AppGate OTP}{-- playstore link: goo.gl/A2SvUd}{July 2015}{Algofocus Technologies}
+	\begin{bullet-list-minor}
+	\item Developed a native Android app for Cryptzone Group AB
+	\item OTPs are generated through the AppGate OTP app on the user's device
+	\item Provides QR codes based cheap \& easy alternative to OTP verification through SMS
+    \item Luhn's and Verhoeff's algorithm are used to generate OTPs and keep Client-Server in sync
+	\item OTPs can be generated even without any Internet connectivity
+    \end{bullet-list-minor}
+
+    \project{PitStop}{-- playstore link: goo.gl/mJDNHp}{Sept 2015}{Algofocus Technologies}
+	\begin{bullet-list-minor}
+	\item Developed a native Android app for JK Tyre \& Industries Ltd.
+	\item Gets user location and share all the tyre repair points near them
+	\item Shows tyre repair points on Google maps and cluster them in a nice way
+	\item Shows tyre product information which can be filtered by various parameters 
+	\item Shows contact information of registered dealers in a particular City 
+	\end{bullet-list-minor}
+
+\newpage
+\vspace*{-20pt}
+\header{Projects}
+    \project{Steel Wheels}{-- demo link: invis.io/955K1836M}{Dec 2015}{Algofocus Technologies}
+	\begin{bullet-list-minor}
+    \item Developed a native Android app for JK Tyre Steel Wheels
+ 	\vspace{2pt}
+    \item App is optimized for kiosk tablets installed at service/care centers
+ 	\vspace{2pt}
+	\item App runs in kiosk mode and also handles the escape mechanism 
+	\end{bullet-list-minor}
+	
+    \project{Maruti My Way}{-- An Android app for Maruti Suzuki customers}{Sept 2014}{Altruist Technologies Pvt. Ltd.}
+	\begin{bullet-list-minor}
+	\item Developed a native Android app to plan trips and share photos
+	\item Get music to suit every mood, find nearest ATMs, hospitals and other services
+	\item Get instant car care tips, send instant SOS alerts to your friends in times of need 
+    \end{bullet-list-minor}
+
+    \project{Trackee}{-- An Android app for tracking employee}{Spring 2014}{Under 6 months Industrial training at NetMax Technologies, Chandigarh, India.}
+	\begin{bullet-list-minor}
+	\item Developed a native Android app to get the device location using GPS through SMS and display on Google Maps integrated in the app
+	\end{bullet-list-minor}
+
+    \project{Clinicall}{-- A Clinical Lab management system}{Summer 2012}{Under 6 weeks Industrial training at WiseBox Technologies, Chandigarh, India.}
+	\begin{bullet-list-minor}
+	\item Developed a Windows application using Java and SQL Server to easily manage the records in a clinical lab
+	\end{bullet-list-minor}
+
+    \project{Other projects}{}{}{Freelancing and Open source contribution}
+	\begin{bullet-list-minor}
+	\item Developed a simple platform-based 2D Android game using AndEngine
+	\vspace{2pt}
+	\item Developed an Android app which shows movies details by scanning folders
+	\vspace{2pt}
+    \item Created a hacked-around version of a minimalistic Wordpress theme `Manifest'
+	\end{bullet-list-minor}
+	
+\vspace*{4pt}%
+\header{Technical \& Communication Skills}
+    \begin{bullet-list-major}
+    \item IDE: Android Studio, Eclipse
+    \vspace{2pt}
+    \item Programming languages: Java SE
+    \vspace{2pt}
+    \item Platforms \& frameworks: Android SDK, JDK
+    \vspace{2pt}
+    \item Software experience: Adobe Creative Suite, MS Office Suite
+    \vspace{2pt}
+    \item Familiar with: HTML, CSS, SQLite, Git, WebSocket, RESTful APIs, JSON, XML
+    \vspace{2pt}
+    \item Learning: RxAndroid, Design patterns, Dependency Injection, Automated testing
+    \vspace{2pt}
+    \item Operating systems: Windows, Macintosh, Ubuntu (basics)
+    \vspace{2pt}
+    \item Natural languages: English, Hindi, Punjabi
+    \end{bullet-list-major}
+
+\vspace*{4pt}%
+\header{Achievements}
+    \begin{bullet-list-major}
+    \item Secured 857 rank in PTU-CET 2010 among 30,000 students and State rank 1313 in AIEEE 2010.
+    \item  Secured 2nd position in an image editing contest at University campus tech-fest 2013.
+    \end{bullet-list-major}
+
+\vspace*{4pt}%
+\header{Extra Curricular Activities}
+    \begin{bullet-list-major}
+    \item  Have participated in Web designing contests at School level.
+    \vspace{2pt}
+    \item  Designed posters for events during University campus tech-fests.
+    \vspace{2pt}
+    \item  Have participated in `IoT \& Smart Cities' hackathon at 91springboard.
+    \vspace{2pt}
+    \item  Have contributed on sites like StackOverflow, Github, and Quora.
+    \end{bullet-list-major}
+
+\vspace*{4pt}%
+\header{Areas of Interest}
+    \content{Android development \& design \labelitemi Web development \& design \labelitemi Graphic \& Logo design \labelitemi UI/UX design \\ Information retrieval \& Web search \labelitemi Type design \& Typography \labelitemi Industrial design \\ Content creation \& blogging  \labelitemi Natural languages \labelitemi Social media \vspace{5pt}}
+
+\vspace*{4pt}%
+\header{Personal Attributes}
+    \content{Attentive listener, quick learner, knowledge enthusiast, and creative.\vspace{5pt}}
+
+\vspace*{4pt}%
+\header{Disclaimer}
+    \content{I hereby claim that the above information is correct up to my knowledge.\vspace{5pt}}
+
+\vspace*{4pt}%
+\header{Recommendations}
+    \content{Recommendations are available on request.}
+
+\end{document}
